@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66baabcd82520e346ad17947aadba528, type: 3}
+  m_Name: Character2SO
+  m_EditorClassIdentifier: 
+  _strength: 5
+  _dexterity: 5
+  _intelligence: 5
+  _maxHealth: 100
+  _health: 150
+  _physAtk: 5
+  _magAtk: 5
+  _speed: 5
+  _armor: 5
+  _magDef: 5
+  _concentration: 5
+  _critMult: 1.5
+  _critRate: 10
+  characterPrefab: {fileID: 3856528384422524389, guid: 258aaa2b8334ab04c9a67b7979c6f6b6,
+    type: 3}
+  jsonFile: {fileID: 4900000, guid: adaa242e3b81bdf45adbdfed8f2e112e, type: 3}

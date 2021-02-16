@@ -1,0 +1,14 @@
+{
+    "_strength" : 5,
+    "_dexterity" : 5,
+    "_intelligence" : 5,
+    "_maxHealth" : 500,
+    "_physAtk" : 5,
+    "_magAtk" : 5,
+    "_speed" : 5,
+    "_armor" : 5,
+    "_magDef" : 5,
+    "_concentration" : 5,
+    "_critMult" : 1.5,
+    "_critRate" : 0
+}
