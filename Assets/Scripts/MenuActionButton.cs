@@ -9,6 +9,11 @@ public class MenuActionButton : MonoBehaviour
     private Text buttonText;
     private MenuAction _menuAction;
 
+    private void Awake()
+    {
+        buttonText = GetComponentInChildren<Text>();
+    }
+
     public MenuAction MenuAction
     {
         set {
@@ -21,6 +26,7 @@ public class MenuActionButton : MonoBehaviour
 
     public void OnClick()
     {
-        _menuAction.Invoke();
+        Debug.Log(_menuAction);
+        _menuAction.OnMenuButtonClick();
     }
 }

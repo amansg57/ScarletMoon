@@ -17,6 +17,6 @@ public class SkillListButton : MonoBehaviour
 
     public void OnClick()
     {
-        skill.SkillClick();
+        skill.OnMenuButtonClick();
     }
 }

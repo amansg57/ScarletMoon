@@ -6,7 +6,8 @@ public class PlayerSkill : Skill
 {
     protected bool isSpecial;
     protected int meterMod;
-    public void SkillClick()
+
+    public override void OnMenuButtonClick()
     {
         _targetSystem.StartTargetting(this);
     }
