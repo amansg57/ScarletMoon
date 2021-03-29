@@ -8,10 +8,12 @@ public class PlayerUnit : Unit
     public float meter;
     public float meterGainMult;
     [SerializeField]
-    private List<PlayerSkill> skills = new List<PlayerSkill>();
+    private List<PlayerSkill> basicSkills = new List<PlayerSkill>();
     private List<MenuAction> menuActions = new List<MenuAction>();
     private MenuActionSpawner menuActionSpawner;
     public UnitSO unitSO;
+
+    public List<PlayerSkill> BasicSkills => basicSkills;
 
     private void Awake()
     {
@@ -34,7 +36,7 @@ public class PlayerUnit : Unit
     {
         menuActionSpawner = gameObject.GetComponentInChildren<MenuActionSpawner>();
 
-        foreach (PlayerSkill s in skills)
+        foreach (PlayerSkill s in basicSkills)
         {
             s.User = this;
             menuActions.Add(s);

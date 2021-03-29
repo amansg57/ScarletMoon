@@ -2,8 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicSkillsMenuAction : MenuAction
+[CreateAssetMenu(fileName = "BasicSkillsMenuAction", menuName = "Scarlet Moon/Menu Actions/BasicSkillsMenuAction", order = 0)]
+public class BasicSkillsMenuAction : BaseMenuAction
 {
+    public override void OnMenuButtonClick()
+    {
+        currentSpawner.SpawnBasicSkillButtons();
+    }
+
     public override void Invoke()
     {
         base.Invoke();

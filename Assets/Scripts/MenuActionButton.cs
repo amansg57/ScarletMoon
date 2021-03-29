@@ -17,7 +17,6 @@ public class MenuActionButton : MonoBehaviour
     public MenuAction MenuAction
     {
         set {
-            Debug.Log(value);
             _menuAction = value;
             buttonText.text = value.name;
         }
@@ -26,7 +25,6 @@ public class MenuActionButton : MonoBehaviour
 
     public void OnClick()
     {
-        Debug.Log(_menuAction);
         _menuAction.OnMenuButtonClick();
     }
 }
