@@ -547,6 +547,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 5de09c13401e0f34a82a753644a34594,
         type: 2}
+    - target: {fileID: 6629818909502383791, guid: 0cf74295ae0f9b04ea966be65ffac188,
+        type: 3}
+      propertyPath: id
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6629818910988184747, guid: 0cf74295ae0f9b04ea966be65ffac188,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -577,6 +582,18 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7346482351051225159, guid: 0cf74295ae0f9b04ea966be65ffac188,
+        type: 3}
+      propertyPath: menuButtonPrefab
+      value: 
+      objectReference: {fileID: 6581675214365331193, guid: ff7eb51e6e3d9774db702ef1cf1de095,
+        type: 3}
+    - target: {fileID: 7346482351051225159, guid: 0cf74295ae0f9b04ea966be65ffac188,
+        type: 3}
+      propertyPath: baseMenuActionManager
+      value: 
+      objectReference: {fileID: 11400000, guid: 7e8459554d84f8b45bd5b8152cd839ae,
+        type: 2}
     - target: {fileID: 9002834013901438513, guid: 0cf74295ae0f9b04ea966be65ffac188,
         type: 3}
       propertyPath: m_LocalScale.x

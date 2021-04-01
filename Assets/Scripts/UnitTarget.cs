@@ -12,11 +12,14 @@ public class UnitTarget : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
     private BoxCollider2D boxCollider2D;
     private Unit _unit;
 
+    public int ID {get; set;}
+
     private void Awake()
     {
         image = gameObject.GetComponent<Image>();
         boxCollider2D = gameObject.GetComponent<BoxCollider2D>();
         _unit = gameObject.GetComponentInParent<Unit>();
+        ID = _unit.ID;
         AddToTargetSystem();
     }
 

@@ -10,6 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 768b25155278627499518a31563fc0a1, type: 3}
-  m_Name: BasicSkillsMenuActionManager
+  m_Name: BaseMenuActionManager
   m_EditorClassIdentifier: 
-  baseMenuActions: []
+  baseMenuActions:
+  - {fileID: 11400000, guid: e7fe23c2d69d452409ba3fac2023f8b7, type: 2}
+  - {fileID: 11400000, guid: b9e8f70b4bfe9ce4d96d700b1e059fde, type: 2}
+  - {fileID: 11400000, guid: fa941add9165f2844bfcc088fd0a5cbb, type: 2}
+  - {fileID: 11400000, guid: 9aa4619771c33ab4696cb584efbb510f, type: 2}

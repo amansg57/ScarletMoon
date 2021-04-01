@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 843489663747974523}
   - component: {fileID: 520911319}
   - component: {fileID: 520911320}
-  - component: {fileID: 1477957618126363351}
+  - component: {fileID: 7346482351051225159}
   m_Layer: 5
   m_Name: SkillListContent
   m_TagString: Untagged
@@ -216,7 +216,7 @@ MonoBehaviour:
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
---- !u!114 &1477957618126363351
+--- !u!114 &7346482351051225159
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -225,11 +225,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5933376933160863429}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 932bd8c8c38f7cb468a9060148d669e2, type: 3}
+  m_Script: {fileID: 11500000, guid: defccd0eb1809f641b50c6a209349615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonPrefab: {fileID: 6581675214365331193, guid: ff7eb51e6e3d9774db702ef1cf1de095,
-    type: 3}
+  menuButtonPrefab: {fileID: 0}
+  baseMenuActionManager: {fileID: 0}
 --- !u!1 &6040588986406190800
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,20 +431,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4a4d9000f85d364b9bd86c3ffd2681c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
+  _strength: 0
+  _dexterity: 0
+  _intelligence: 0
+  _maxHealth: 0
+  _health: 0
+  _physAtk: 0
+  _magAtk: 0
+  _speed: 0
+  _armor: 0
+  _magDef: 0
+  _concentration: 0
+  _critMult: 0
+  _critRate: 0
   onUnitDeath: {fileID: 0}
+  _timeToAct: 0
   meter: 0
   meterGainMult: 0
-  skillList:
-  - {fileID: 11400000, guid: 5de09c13401e0f34a82a753644a34594, type: 2}
-  - {fileID: 11400000, guid: 70806e22b619b89408a161e68123559b, type: 2}
-  - {fileID: 11400000, guid: f73c7fb947d45f048a05d33a9cf121e3, type: 2}
-  - {fileID: 11400000, guid: f73c7fb947d45f048a05d33a9cf121e3, type: 2}
-  - {fileID: 11400000, guid: f73c7fb947d45f048a05d33a9cf121e3, type: 2}
-  - {fileID: 11400000, guid: f73c7fb947d45f048a05d33a9cf121e3, type: 2}
-  - {fileID: 11400000, guid: f73c7fb947d45f048a05d33a9cf121e3, type: 2}
-  - {fileID: 11400000, guid: f73c7fb947d45f048a05d33a9cf121e3, type: 2}
-  - {fileID: 11400000, guid: f73c7fb947d45f048a05d33a9cf121e3, type: 2}
-  - {fileID: 11400000, guid: f73c7fb947d45f048a05d33a9cf121e3, type: 2}
+  basicSkills: []
   unitSO: {fileID: 11400000, guid: 5d4388e5d03dafe4d9d46de54c249315, type: 2}
 --- !u!1 &7534032369567350495
 GameObject:

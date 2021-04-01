@@ -7,6 +7,7 @@ using UnityEngine;
 public class TargetSystem : ScriptableObject
 {
     private List<PlayerTarget> playerTargets = new List<PlayerTarget>();
+    private List<PlayerTarget> inBattlePlayerTargets = new List<PlayerTarget>();
     private List<EnemyTarget> enemyTargets = new List<EnemyTarget>();
 
     private PlayerSkill skill;
@@ -59,16 +60,6 @@ public class TargetSystem : ScriptableObject
         skill.Invoke();
     }
 
-    public void AddPlayerTarget(PlayerTarget pt)
-    {
-        playerTargets.Add(pt);
-    }
-
-    public void AddEnemyTarget(EnemyTarget et)
-    {
-        enemyTargets.Add(et);
-    }
-
     public void RandomTarget(Skill s)
     {
         List<Unit> targets = new List<Unit>();
@@ -107,12 +98,6 @@ public class TargetSystem : ScriptableObject
         s.Invoke();
     }
 
-    private void OnEnable()
-    {
-        playerTargets.Clear();
-        enemyTargets.Clear();
-    }
-
     private void EndTargetting()
     {
         foreach (EnemyTarget et in enemyTargets)
@@ -125,4 +110,35 @@ public class TargetSystem : ScriptableObject
             pt.DisableTarget();
         }
     }
+
+    private void OnEnable()
+    {
+        playerTargets.Clear();
+        enemyTargets.Clear();
+    }
+
+    public void AddPlayerTarget(PlayerTarget pt)
+    {
+        playerTargets.Add(pt);
+    }
+
+    public void AddEnemyTarget(EnemyTarget et)
+    {
+        enemyTargets.Add(et);
+    }
+
+    public void SetInBattleTargets(List<int> inBattleIDs)
+    {
+        foreach (int i in inBattleIDs)
+        {
+            inBattlePlayerTargets.Add(playerTargets.Find(x => x.ID == i));
+        }
+    }
+
+    public void ChangeInBattleTargets(int outID, int inID)
+    {
+        inBattlePlayerTargets.Add(playerTargets.Find(x => x.ID == inID));
+        inBattlePlayerTargets.RemoveAll(x => x.ID == outID);
+    }
+
 }

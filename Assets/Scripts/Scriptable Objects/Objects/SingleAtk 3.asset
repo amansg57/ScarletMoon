@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86cce2fce241a84489d706c55b89ef43, type: 3}
   m_Name: SingleAtk 3
   m_EditorClassIdentifier: 
+  _actionName: Single Attack 3
   targets: []

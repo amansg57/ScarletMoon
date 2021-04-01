@@ -7,6 +7,8 @@ using UnityEngine;
 public class UnitSO : ScriptableObject
 {
     [SerializeField]
+    private int id;
+    [SerializeField]
     private int _strength, _dexterity, _intelligence;
     [SerializeField]
     private int _maxHealth, _health, _physAtk, _magAtk, _speed, _armor, _magDef, _concentration; // Base stats

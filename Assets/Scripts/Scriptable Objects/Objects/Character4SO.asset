@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66baabcd82520e346ad17947aadba528, type: 3}
   m_Name: Character4SO
   m_EditorClassIdentifier: 
+  id: 4
   _strength: 5
   _dexterity: 5
   _intelligence: 5

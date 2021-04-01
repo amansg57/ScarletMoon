@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwitchMenuAction : MenuAction
+[CreateAssetMenu(fileName = "SwitchMenuAction", menuName = "Scarlet Moon/Menu Actions/SwitchMenuAction", order = 0)]
+public class SwitchMenuAction : BaseMenuAction
 {
-    public override void Invoke()
+    [SerializeField]
+    private CharacterSwitcher characterSwitcher;
+    public override void OnMenuButtonClick()
     {
-        base.Invoke();
+        characterSwitcher.StartSwitcher(currentSpawner, currentSpawner.ID);
     }
 }

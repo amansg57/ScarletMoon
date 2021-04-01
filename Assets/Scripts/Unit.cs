@@ -8,6 +8,8 @@ using UnityEngine;
 public class Unit : MonoBehaviour
 {
     [SerializeField]
+    protected int id;
+    [SerializeField]
     protected int _strength, _dexterity, _intelligence;
     [SerializeField]
     protected int _maxHealth, _health, _physAtk, _magAtk, _speed, _armor, _magDef, _concentration;
@@ -22,6 +24,7 @@ public class Unit : MonoBehaviour
     private System.Random rand = new System.Random();
 
     // Properties
+    public int ID => id;
     public bool IsAlive => _health > 0;
     public int Health => _health;
     public int MaxHealth => _maxHealth;

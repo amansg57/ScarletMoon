@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17187bf1793c1b04ca6c46cfa56f8bb6, type: 3}
   m_Name: BasicSkillsMenuAction
   m_EditorClassIdentifier: 
+  _actionName: Basic Skills

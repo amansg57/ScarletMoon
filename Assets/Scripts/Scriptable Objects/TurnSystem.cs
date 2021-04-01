@@ -35,6 +35,11 @@ public class TurnSystem : ScriptableObject
         units.Add(u);
     }
 
+    public void RemoveUnit(int id)
+    {
+        units.RemoveAll(u => u.ID == id);
+    }
+
     public void DeathCheck()
     {
         bool enemyDead = true;

@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86cce2fce241a84489d706c55b89ef43, type: 3}
-  m_Name: SingleAtk 2
+  m_Script: {fileID: 11500000, guid: dcd77cc502b9a414bacab076c4217278, type: 3}
+  m_Name: SwitchMenuAction
   m_EditorClassIdentifier: 
-  _actionName: Single Attack 2
-  targets: []
+  _actionName: Switch
+  characterSwitcher: {fileID: 11400000, guid: dbe8a69f321c26a429687e2ca3e9d378, type: 2}

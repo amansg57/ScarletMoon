@@ -11,6 +11,8 @@ public class MenuActionSpawner : MonoBehaviour
     private BaseMenuActionManager baseMenuActionManager;
     private PlayerUnit playerUnit;
 
+    public int ID => playerUnit.ID;
+
     private void Start()
     {
         playerUnit = gameObject.GetComponentInParent<PlayerUnit>();
@@ -46,15 +48,12 @@ public class MenuActionSpawner : MonoBehaviour
 
     public void SpawnEXSkillButtons()
     {
-
+        DeleteButtons();
+        List<MenuAction> menuActionList = playerUnit.EXSkills.Cast<MenuAction>().ToList();
+        SpawnButtonList(menuActionList);
     }
 
     public void SpawnItemButtons()
-    {
-
-    }
-
-    public void SpawnSwitchButtons()
     {
 
     }

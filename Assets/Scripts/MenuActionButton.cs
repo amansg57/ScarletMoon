@@ -18,7 +18,7 @@ public class MenuActionButton : MonoBehaviour
     {
         set {
             _menuAction = value;
-            buttonText.text = value.name;
+            buttonText.text = value.ActionName;
         }
         
     }

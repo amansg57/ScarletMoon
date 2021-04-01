@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66baabcd82520e346ad17947aadba528, type: 3}
   m_Name: Character1SO
   m_EditorClassIdentifier: 
+  id: 1
   _strength: 5
   _dexterity: 5
   _intelligence: 5
@@ -25,6 +26,6 @@ MonoBehaviour:
   _concentration: 5
   _critMult: 1.5
   _critRate: 10
-  characterPrefab: {fileID: 6629818909502383776, guid: 0cf74295ae0f9b04ea966be65ffac188,
+  characterPrefab: {fileID: 7799357259760425369, guid: c9c41fe72408e0541be8464b3ff02010,
     type: 3}
   jsonFile: {fileID: 4900000, guid: 19e269dcad37e50409139f7e9253c3c2, type: 3}

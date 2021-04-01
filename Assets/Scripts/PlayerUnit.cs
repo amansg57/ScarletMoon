@@ -9,11 +9,13 @@ public class PlayerUnit : Unit
     public float meterGainMult;
     [SerializeField]
     private List<PlayerSkill> basicSkills = new List<PlayerSkill>();
+    private List<PlayerSkill> exSkills = new List<PlayerSkill>();
     private List<MenuAction> menuActions = new List<MenuAction>();
     private MenuActionSpawner menuActionSpawner;
     public UnitSO unitSO;
 
     public List<PlayerSkill> BasicSkills => basicSkills;
+    public List<PlayerSkill> EXSkills => exSkills;
 
     private void Awake()
     {
@@ -46,7 +48,7 @@ public class PlayerUnit : Unit
 
     public override void TakeTurn()
     {
-        menuActionSpawner.SpawnButtonList(menuActions);
+        menuActionSpawner.CreateBaseMenu();
     }
 
     public void EndTurn()
@@ -62,6 +64,12 @@ public class PlayerUnit : Unit
     public void RemoveMeter(int meterMod)
     {
         meter -= meterMod;
+    }
+
+    public void OnSwitch()
+    {
+        TimeToAct = 5;
+        EndTurn();
     }
 
     public override void OnBattleEnd()

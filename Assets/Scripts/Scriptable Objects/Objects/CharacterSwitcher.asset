@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86cce2fce241a84489d706c55b89ef43, type: 3}
-  m_Name: SingleAtk 2
+  m_Script: {fileID: 11500000, guid: e7727ab014f9d894eaa683292eef5b34, type: 3}
+  m_Name: CharacterSwitcher
   m_EditorClassIdentifier: 
-  _actionName: Single Attack 2
-  targets: []
+  turnSystem: {fileID: 11400000, guid: 0dff08948cd8933469b8e70148a5d8c7, type: 2}
+  targetSystem: {fileID: 11400000, guid: 6f70fabddef151b46ba4847d0d8e7fc9, type: 2}

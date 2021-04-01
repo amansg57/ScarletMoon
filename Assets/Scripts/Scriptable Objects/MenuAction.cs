@@ -8,4 +8,13 @@ public class MenuAction : ScriptableObject
     public virtual void Invoke() {}
 
     public virtual void OnMenuButtonClick() {}
+
+    [SerializeField]
+    protected string _actionName;
+
+    public string ActionName
+    {
+        get => _actionName;
+        set { _actionName = value; }
+    }
 }

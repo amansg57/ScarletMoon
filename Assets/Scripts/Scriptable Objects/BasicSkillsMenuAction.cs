@@ -9,9 +9,4 @@ public class BasicSkillsMenuAction : BaseMenuAction
     {
         currentSpawner.SpawnBasicSkillButtons();
     }
-
-    public override void Invoke()
-    {
-        base.Invoke();
-    }
 }
