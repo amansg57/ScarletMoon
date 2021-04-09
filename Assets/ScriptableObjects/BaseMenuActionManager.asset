@@ -15,5 +15,4 @@ MonoBehaviour:
   baseMenuActions:
   - {fileID: 11400000, guid: e7fe23c2d69d452409ba3fac2023f8b7, type: 2}
   - {fileID: 11400000, guid: b9e8f70b4bfe9ce4d96d700b1e059fde, type: 2}
-  - {fileID: 11400000, guid: fa941add9165f2844bfcc088fd0a5cbb, type: 2}
   - {fileID: 11400000, guid: 9aa4619771c33ab4696cb584efbb510f, type: 2}
