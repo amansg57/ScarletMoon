@@ -17,7 +17,7 @@ public class EnemySingleAtk : EnemySkill
 
     public override void Invoke()
     {
-        targets[0].TakePhysDamage(potency, _user.PhysAtk, _user.CritRate, _user.CritMult);
+        targets[0].TakePhysDamage(potency, _user.PhysAtk, _user.CritRate, _user.CritMult, element);
         FinishSkill();
     }
 }

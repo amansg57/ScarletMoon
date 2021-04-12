@@ -15,11 +15,14 @@ public class SingleAtk : PlayerSkill
         potency = 5;
         timeSpent = 5;
         meterMod = 1;
+        element = Element.None;
+        augmentable = true;
     }
 
     public override void Invoke()
     {
-        targets[0].TakePhysDamage(potency, _user.PhysAtk, _user.CritRate, _user.CritMult);
+        targets[0].TakePhysDamage(potency, _user.PhysAtk, _user.CritRate, _user.CritMult, element);
+        base.Invoke();
         FinishSkill();
     }
 }

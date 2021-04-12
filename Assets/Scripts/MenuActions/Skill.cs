@@ -8,8 +8,10 @@ public class Skill : MenuAction
     protected Unit _user;
     protected bool _castOnEnemy, _castOnAll;
     protected int timeSpent;
+    protected Element element;
     protected static TargetSystem _targetSystem;
     protected static GameEvent _onTurnEnd;
+    protected bool augmentable;
 
     protected virtual void FinishSkill()
     {
@@ -24,6 +26,16 @@ public class Skill : MenuAction
     public Unit User
     {
         set => _user = value;
+    }
+
+    public TargetSystem TargetSystem
+    {
+        set => _targetSystem = value;
+    }
+
+    public GameEvent OnTurnEndEvent
+    {
+        set => _onTurnEnd = value;
     }
 
     public void SetTargets(List<Unit> t)
@@ -42,14 +54,20 @@ public class Skill : MenuAction
         Debug.Log(this.name + ": " + timeSpent);
     }
 
-    public TargetSystem TargetSystem
+    public virtual void Invoke()
     {
-        set => _targetSystem = value;
+        AugmentDamage();
     }
-
-    public GameEvent OnTurnEndEvent
+    
+    protected void AugmentDamage()
     {
-        set => _onTurnEnd = value;
+        if (_user.Augment != null)
+        {
+            foreach (Unit t in targets)
+            {
+                _user.Augment.DamageUnit(t);
+            }
+        }
     }
 
 }

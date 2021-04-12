@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8b86ae551052e34c8546c9eef3eeb9c, type: 3}
   m_Name: DummySkill
   m_EditorClassIdentifier: 
+  _actionName: 
   targets: []
-  skillName: 

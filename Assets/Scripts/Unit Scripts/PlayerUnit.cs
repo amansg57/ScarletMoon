@@ -51,8 +51,9 @@ public class PlayerUnit : Unit
         menuActionSpawner.CreateBaseMenu();
     }
 
-    public void EndTurn()
+    public override void EndTurn()
     {
+        base.EndTurn();
         menuActionSpawner.DeleteButtons();
     }
 

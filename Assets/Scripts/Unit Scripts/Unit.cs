@@ -17,8 +17,6 @@ public class Unit : MonoBehaviour
     protected float _critMult, _critRate;
     [SerializeField]
     private GameEvent onUnitDeath;
-    private Element augmentElement;
-    private int augmentTurnCount;
     [SerializeField]
     private float _timeToAct;
     private System.Random rand = new System.Random();
@@ -43,28 +41,29 @@ public class Unit : MonoBehaviour
             }
         }
     }
+    public Augment Augment {get; set;}
 
     // Methods
     public virtual void TakeTurn() {}
 
-    public void TakePhysDamage(float potency, float enemyStatMod, float enemyCritRate, float enemyCritMult)
+    public void TakePhysDamage(float potency, float enemyStatMod, float enemyCritRate, float enemyCritMult, Element attackElement)
     {
         float damageReduction = (float)(_armor / (float)(_armor + 50));
         TakeDamage(potency, enemyStatMod, enemyCritRate, enemyCritMult, damageReduction);
     }
     
-    public void TakeMagDamage(float potency, float enemyStatMod, float enemyCritRate, float enemyCritMult)
+    public void TakeMagDamage(float potency, float enemyStatMod, float enemyCritRate, float enemyCritMult, Element attackElement)
     {
         float damageReduction = (float)(_magDef / (float)(_magDef + 50));
         TakeDamage(potency, enemyStatMod, enemyCritRate, enemyCritMult, damageReduction);
     }
 
-    public void TakeHybridDamage(float potency, float enemyStatMod, float enemyCritRate, float enemyCritMult)
+    public void TakeHybridDamage(float potency, float enemyStatMod, float enemyCritRate, float enemyCritMult, Element attackElement)
     {
         // Calculate using both Def and MagDef
     }
 
-    public void TakeDamage(float potency, float enemyStatMod, float enemyCritRate, float enemyCritMult, float damageReduction)
+    private void TakeDamage(float potency, float enemyStatMod, float enemyCritRate, float enemyCritMult, float damageReduction)
     {
         float damage = potency * enemyStatMod;
         
@@ -82,12 +81,6 @@ public class Unit : MonoBehaviour
         if (_health <= 0) {OnDeath();}
     }
 
-    public void AugmentElement(Element e, int duration)
-    {
-        augmentElement = e;
-        augmentTurnCount = duration;
-    }
-
     private void DisplayDamage(int damage)
     {
         Debug.Log("Damage: " + damage);
@@ -96,6 +89,15 @@ public class Unit : MonoBehaviour
     private void OnDeath()
     {
         onUnitDeath.Raise();
+    }
+
+    public virtual void EndTurn()
+    {
+        if (Augment != null)
+        {
+            if (Augment.TurnsRemaining == 1) Augment = null;
+            else Augment.TurnsRemaining--;
+        }
     }
 
     public virtual void OnBattleEnd()

@@ -5,8 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "ExSkillsMenuAction", menuName = "Scarlet Moon/Menu Actions/ExSkillsMenuAction", order = 0)]
 public class ExSkillsMenuAction : BaseMenuAction
 {
-    public override void Invoke()
+    public override void OnMenuButtonClick()
     {
-        base.Invoke();
+        currentSpawner.SpawnEXSkillButtons();
     }
 }
